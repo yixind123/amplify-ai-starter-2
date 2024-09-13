@@ -1,5 +1,5 @@
 import { AIConversation } from "@aws-amplify/ui-react-ai";
-import { Flex, Text, View } from "@aws-amplify/ui-react";
+import { View } from "@aws-amplify/ui-react";
 import { useAIConversation } from "../client";
 
 export const Chat = () => {
