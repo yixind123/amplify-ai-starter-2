@@ -38,6 +38,17 @@ const schema = a.schema({
     ],
   }),
 
+  Secondchat: a.conversation({
+    aiModel: a.ai.model("Claude 3.5 Sonnet"),
+    systemPrompt: "You are a helpful assistant",
+    tools: [
+      {
+        query: a.ref("getWeather"),
+        description: "Provides the current weather for a given city.",
+      },
+    ],
+  }),
+
   generateRecipe: a
     .generation({
       aiModel: a.ai.model("Claude 3 Haiku"),
